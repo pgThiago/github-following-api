@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Desafio 2</title>
 </head>
     <body>
@@ -12,17 +12,20 @@
             <header class="container-header">
                 <h1>Buscar quem seu parça está seguindo</h1>
                 <h2>🕵️</h2>
-                <input class="input" type="text" placeholder="Username no GitHub">
-                <button class="search-button" type="submit" onclick="search()">Pesquisar</button>
+                <input class="input" type="text" alue="pgthiago"placeholder="Username no GitHub"  >
+                <button class="search-button" type="button" >Pesquisar</button>
             </header>    
             <main class="users-list"></main>
         </div>
     </body>
 
+    <script type="module" src="js/service.js"></script>
+    <script type="module" src="js/scripts.js"></script>
+    
     <script src="lib/jasmine-2.4.1/jasmine.js"></script>
     <script src="lib/jasmine-2.4.1/jasmine-html.js"></script>
     <script src="lib/jasmine-2.4.1/boot.js"></script>
-
-    <script src="scripts.js" data-cover></script>
+    
     <script src="spec/DateTimeSpec.js"></script>
+    
 </html>
