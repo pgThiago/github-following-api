@@ -19,8 +19,6 @@ html, body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    flex-wrap: wrap;
 }
 
 h1 {
@@ -63,7 +61,7 @@ h1 {
 }
 
 .users-list{
-    width: 35%;
+    width: 70%;
     margin: auto;
 }
 
@@ -122,9 +120,11 @@ h1 {
         font-size: 16px;
     }
     
-    .search-button {
-    
-        font-size: 16px;
-        
+    .search-button {    
+        font-size: 16px;        
     }    
+
+    .users-list{
+        width: 90%;
+    }
 }
