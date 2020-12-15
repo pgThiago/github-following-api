@@ -81,6 +81,7 @@ h1 {
 .users-list{
     width: 50%;
     margin: auto;
+    margin-top: 20px;
 }
 
 .user-item {
