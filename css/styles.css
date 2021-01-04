@@ -37,6 +37,7 @@ h1 {
     color: #F0F0F4;
     font-size: 30px;
     margin-bottom: 50px;
+    letter-spacing: 3px;
 }
 
 h2 {
@@ -118,19 +119,22 @@ h3 {
     font-size: 20px;
     color: #F0F0F4;
   
-    margin: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 
-    width: 100px;
+    width: 150px;
     text-align: center;
+
+    background-color:#FF3E86;
 
     transition: background-color 1s;
 }
 
 .user-item a:hover{
-    width: 100px;
+    width: 150px;
     border-radius: 1px;
     text-align: center;
-    background-color:#FF3E86;
+    background-color:rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 900px){

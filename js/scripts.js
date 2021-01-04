@@ -18,12 +18,18 @@ buttonElement.onclick = function search(){
   const users = getUsersFromApi(inputElement.value.toLowerCase());
 
   users.then(userArray => {
+    if(userArray.length === 0)
+      list += `<h3>${inputElement.value} segue nenhum dev</h3>`
+    else
+      list += `<h3>${inputElement.value} está seguindo os seguintes devs</h3>`
     userArray.map(user => {
+      console.log(user);
       list += 
       `<section class="user-item">
         <img src="${user.avatar_url}" alt="alt">
         <p>${user.login}</p>
-        <a href="${user.html_url}">Ver perfil</a>
+        <a href="https://github.com/${user.login}?tab=repositories" target="_blank" rel="noopener noreferrer">Repositórios</a>
+        <a href="${user.html_url}" target="_blank" rel="noopener noreferrer">Ver perfil</a>
       </section>`
     })    
     listElement.innerHTML = list;
