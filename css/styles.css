@@ -1,26 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 html, body {
-    background-color: #121214;
-    font-family: Roboto;
+	background-color: #121214;
+	font-family: Roboto;
+	height: 100%;
 }
 
 .container {
-    width: 70%;
-    margin: auto;
-    margin-top: 2%;
-    /* background-color: blue; */
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	width: 100%;
+	margin-top: 2%;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .container-header {
@@ -53,7 +52,7 @@ h3 {
 
 .input {
     outline: none;
-    width: 50%;
+    width: 30%;
     height: 50px;
 
     margin-bottom: 20px;
@@ -68,36 +67,78 @@ h3 {
 }
 
 .search-button {
-    border: none;
-    width: 50%;
-    height: 50px;
-    cursor: pointer;
+	border: none;
+	width: 30%;
+	height: 50px;
+	cursor: pointer;
 
-    background-color:#FF3E86;
+	background-color:#FF3E86;
 
-    font-size: 20px;
-    color: #F0F0F4;
-    transition: background 1s;
+	font-size: 20px;
+	color: #F0F0F4;
+	transition: background 1s;
 }
 
 .search-button:hover {
-    background-color:rgba(0, 0, 0, 0.7);
+  background-color:rgba(0, 0, 0, 0.7);
+}
+
+.load-more {
+	border: none;
+	width: 30%;
+	height: 50px;
+	cursor: pointer;
+
+	margin: 2em 0;
+
+	background-color:#FF3E86;
+
+	font-size: 20px;
+	color: #F0F0F4;
+	transition: background 1s;
+}
+.load-more:hover {
+	background-color:rgba(0, 0, 0, 0.7);
+}
+
+.remove {
+	opacity: 0;
+}
+
+.reveal {
+	opacity: 1;
+}
+
+.info-text {
+	font-size: 1.5em;
+	color: #F0F0F4;
+	margin-top: 2em;
+}
+
+.loading {
+	font-size: 1.5em;
+	color: #F0F0F4;
+	margin-top: 2em;
 }
 
 .users-list{
-    width: 50%;
-    margin: auto;
-    margin-top: 20px;
+	width: 90%;
+	margin-top: 20px;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1em;
 }
 
 .user-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    background-color: #202024;
-    border-bottom: 1px solid #121214;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	background-color: #202024;
+	border-bottom: 1px solid #121214;
 }
 
 .user-item img{

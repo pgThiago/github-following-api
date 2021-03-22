@@ -1,4 +1,4 @@
-export default async function getUsersFromApi(username) {
-    const response = await fetch(`https://api.github.com/users/${username}/following`);
-    return response.json();
+async function getUsersFromApi(username, page) {
+	const response = await fetch(`https://api.github.com/users/${username}/following?per_page=100&page=${page}`)
+	return response.json()
 }
