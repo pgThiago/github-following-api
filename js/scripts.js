@@ -3,6 +3,7 @@ const buttonElement = document.querySelector('.search-button')
 let listElement = document.querySelector('.users-list')
 
 let list = ''
+let shouldLoadMore = false
 
 let page = 1
 
@@ -22,9 +23,12 @@ buttonElement.onclick = function search() {
 	loadingElement.classList.add('reveal')
 
 	const users = getUsersFromApi(inputElement.value.toLowerCase(), page)
+	if (!users)
+		list += `Usuário não encontrado!`
 
+	if (!shouldLoadMore)
+		list = ''
 	users.then(userArray => {
-		// console.log(userArray.length)
 		userArray.map(user => {
 			list +=
 				`<section class="user-item">
@@ -48,5 +52,6 @@ buttonElement.onclick = function search() {
 
 function loadMore() {
 	page++
+	shouldLoadMore = true
 	document.querySelector('.search-button').click()
 }
