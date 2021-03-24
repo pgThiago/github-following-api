@@ -44,6 +44,7 @@ buttonElement.onclick = function search() {
 		loadingElement.classList.remove('reveal')
 		loadMoreButton.classList.add('reveal')
 		listElement.innerHTML = list
+		shouldLoadMore = false
 
 	}).catch(error => {
 		listElement.innerHTML = `<h3>Usuário não encontrado</h3>`
